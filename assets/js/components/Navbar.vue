@@ -52,7 +52,6 @@
                     router.push({ name: 'login' })
                 }
                 catch (error) {
-                    console.log(error)
                     store.commit('addFlash', { message: error?.response?.data?.data?.message, type: 'failure' })
                 }
             },

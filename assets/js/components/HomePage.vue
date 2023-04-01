@@ -381,7 +381,6 @@
                 }
                 catch (error) {
                     updateSessionFromResponse(error.response)
-                    console.log(error)
                 }
             },
             editNote(e) {
@@ -413,14 +412,12 @@
                         }
                     }
                     this.notes = this.notes.filter(n => n)
-                    console.log(response)
                 
                     updateSessionFromResponse(response)
                     store.commit('addFlash', { message: response.data.data.message, type: 'success' })
                 }
                 catch (error) {
                     updateSessionFromResponse(error.response)
-                    console.log(error)
                 }
             },
             setNoteForm(note = null) {
